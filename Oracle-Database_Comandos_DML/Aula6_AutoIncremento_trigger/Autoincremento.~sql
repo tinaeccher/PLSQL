@@ -1,0 +1,5 @@
+--IDENTITY - NUMERO INTEIRO CRESCENTE
+-- Se o campo não estiver no comando INSERT, 
+--o valor que será incluído será o padrão definido na criação da tabela.
+--O campo estará preenchido com o seu padrão, caso ele não seja declarado no INSERT.
+INSERT INTO TAB (DESCRICAO) VALUE (CLIENTE Y)
