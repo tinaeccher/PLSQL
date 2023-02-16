@@ -1,0 +1,15 @@
+L-SQL, nós podemos entender como uma extensão natural da linguagem SQL dentro do Oracle que adiciona as funcionalidades originais do SQL, que são completadas com extensões que a tornam uma linguagem de programação completa, pois dentro do PL-SQL você vai encontrar todos aqueles controles de fluxo, tratamento de exceções, orientação a objeto, entre várias outras coisas.
+
+[09:09] Com o PL-SQL nós podemos escrever programas inteiros, desde os mais simples até programas extremamente sofisticados que manipulam dados diretamente do Oracle. A linguagem SQL foi criada com um propósito realmente de oferecer, aos usuários do Oracle, uma solução de programação para se poder escrever aplicações, por exemplo, de dimensões críticas, que precisam ser executadas dentro do próprio banco de dados Oracle.
+
+[09:43] Isso fez com que no banco de dados Oracle se torne muito mais vantajoso você fazer programas desse tipo, usando o PL-SQL, do que, por exemplo, uma ferramenta de programação externa. Então, para deixar bem claro, o PL-SQL não foi criado para ser uma linguagem padrão e nem uma linguagem dependente.
+
+[10:10] Ao contrário disso, ela é uma tecnologia exclusiva da Oracle, é uma linguagem proprietária da Oracle e só pode ser utilizada dentro de ferramentas da Oracle. Como ela é uma linguagem que só funciona em bancos de dados Oracle, ela não tem como objetivo ser uma linguagem de propósito geral, como, por exemplo, o Java, o C ou o C#, .NET ou diversas outras linguagens que eu posso listar aqui, há uma lista sem fim.
+
+[10:46] Apesar disso, o PL-SQL acabou sendo muito difundido, mesmo ele sendo proprietário dentro do Oracle, ele possui, inclusive, uma comunidade enorme de usuários e de programadores dedicados a essa linguagem.
+
+[11:01] A cada nova versão do Oracle, do banco de dados Oracle, ele acaba trazendo embutido a sua versão correspondente ao PL-SQL, incrementando, claro, uma série de novos comandos e novas funcionalidades. Porém, deixando sempre as funcionalidades antigas ainda ativas.
+
+[11:24] Podemos então resumir a diferença básica entre o PL-SQL e o SQL nesse quadrado que eu coloquei neste slide. O SQL é uma linguagem declarativa, não é possível criar programas inteiros em SQL, que é uma linguagem padrão ANSI, que pode ser usada, por exemplo, no caso do SQL, em qualquer outro banco de dados relacional. Ou seja, coisas que fazemos em SQL Oracle, podemos transportar, por exemplo, para Microsoft, Db2 e assim por diante.
+
+[11:56] Já o PL-SQL, ela é uma linguagem que chamaríamos de imperativa, o que possibilita, claro, a construção de programas complexos. E o PL-SQL é uma linguagem proprietária, utilizada somente no ambiente Oracle. Era isso o que eu queria falar um pouco sobre a definição do PL-SQL e da sua importância dentro do ambiente Oracle. Valeu, um abraço e até os próximos vídeos.
