@@ -1,0 +1,41 @@
+--CLASSIFICAÇÃO DOS CAMPOS DE FUNCIONÁRIOS POR CLIENTE
+--todo cliente que tem mais de 20 funcionários é um grande cliente. Senão, ele será um pequeno cliente
+SELECT CLIENTE 
+       (CASE 
+        WHEN NUM_FUNC >= 20 -- QUANDO NUMERO DE FUNCIONARIOS É MAIOR QUE 20
+        THEN ‘GRANDE’  -- ENTÃO É UM GRANDE CLIENTE
+        ELSE ‘PEQUENO’ -- SENAO É UM PEQUENO CLIENTE
+        END) 
+FROM CLIENTE
+
+-- seguinte critério de classificação: 
+--os produtos caros são aqueles que custam mais do que 12 unidades monetárias. 
+-- Os produtos em conta estão entre 7 e 12. 
+-- E os produtos baratos são os que têm um preço de lista menor do que 7.
+
+SELECT NOME_DO_PRODUTO, PRECO_DE_LISTA, -- SELECIONA OS CAMPOS 
+       (CASE 
+       WHEN PRECO_DE_LISTA >= 12 THEN 'PRODUTO CARO' -- QUANDO PRECO FOR MAIOR QUE 12 CLASSIFICA COMO CARO
+       WHEN PRECO_DE_LISTA >= 7 AND PRECO_DE_LISTA < 12 THEN 'PRODUTO EM CONTA' -- QUANDO PRECO FOR MENO QUE 7 R MAIOR QUE 12 CLASSIFICA COMO EM CONTA
+       ELSE 'PRODUTO BARATO' --SENÃO CLASSIFICA COMO PRODUTO_BARATO
+       END) AS CLASSIFICACAO -- ALIAS PARA AS CONDIÇÕES
+FROM TINA_TB_PRODUTOS
+ORDER BY CLASSIFICACAO --ORDENADO PELA ALIAS
+
+--EXERCICIO
+--Para cada cliente, temos seus limites de crédito mensais. Liste somente os nomes dos clientes e os classifique por:
+--Acima ou igual a 150.000 de limite de crédito - Clientes grandes
+--Entre 150.000 e 110.000 de limite de crédito - Clientes médios
+--Menores que 110.000 de limite de crédito - Clientes pequenos
+
+SELECT * FROM TINA_TB_CLIENTES
+
+SELECT NOME,
+(CASE 
+      WHEN LIMITE_DE_CREDITO >= 150000 THEN 'CLIENTE GRANDE'
+      WHEN LIMITE_DE_CREDITO >= 110000 AND LIMITE_DE_CREDITO < 150000 THEN 'CLIENTE MEDIO'
+      ELSE 'CLIENTE PEQUENO'
+      END) AS TAMANHO_CLIENTE 
+FROM TINA_TB_CLIENTES
+ORDER BY TAMANHO_CLIENTE 
+           
