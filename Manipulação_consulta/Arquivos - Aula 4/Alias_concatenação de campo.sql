@@ -1,0 +1,6 @@
+select * from TINA_TB_CLIENTES t
+
+SELECT 
+       NOME,
+       ENDERECO1 || ',' || BAIRRO || ',' || CIDADE || '-' || ESTADO AS "ENDERECO COMPLETO"
+FROM TINA_TB_CLIENTES

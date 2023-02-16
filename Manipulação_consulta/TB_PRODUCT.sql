@@ -1,0 +1,34 @@
+create table TINA_TB_PRODUCT
+(
+  id_product varchar2(20) not null,
+  ds_product varchar2(150) not null,
+  ds_packing varchar2(50) not null,
+  ds_size       varchar2(50) not null,
+  flavor     varchar2(50) not null
+)
+
+ALTER TABLE TB_PRODUCT
+ADD (COST NUMBER(5))
+
+
+ALTER TABLE TB_PRODUCT
+MODIFY (COST NUMBER(5,2))
+
+
+ALTER TABLE TB_PRODUCT
+RENAME COLUMN FLAVOR TO DS_FLAVOR
+
+ALTER TABLE TB_PRODUCT
+DROP COLUMN COST_UNIT
+
+---CRIADA OUTRA TABELA PRODUCT2
+
+DROP TABLE TB_COSTUMER2
+
+ALTER TABLE TB_PRODUCT
+RENAME TO TINA_TB_PRODUCT
+
+
+
+
+SELECT * FROM TB_PRODUCT
